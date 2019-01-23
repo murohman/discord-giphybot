@@ -15,17 +15,15 @@ client.on(EVENT_READY, () => {
 });
 
 client.on(EVENT_MESSAGE, message => {
-    if (message.startsWith(config.discord.botCommandPrefix)) {
-        let message = utils.parse(message.content);
-        let sanitizedQuery = utils.sanitize(message);
+    if (message.content.startsWith(config.discord.botCommandPrefix)) {
+        let parsedMessage = utils.parse(message.content);
+        let sanitizedQuery = utils.sanitize(parsedMessage);
 
         request(giphy.getRandomFullUrlForQuery(sanitizedQuery), (err, res, body) => {
             var response = JSON.parse(body);
             const attachment = new Attachment(response.data.images.original.url);
             message.channel.send(attachment);
         });
-
-        
     }
 });
 
