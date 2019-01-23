@@ -19,7 +19,9 @@ client.on(EVENT_MESSAGE, message => {
         let parsedMessage = utils.parse(message.content);
         let sanitizedQuery = utils.sanitize(parsedMessage);
 
-        request(giphy.getTranslateFullUrlWithWierdnessForQuery(sanitizedQuery), (err, res, body) => {
+        let requestUrl = giphy.getTranslateFullUrlWithWierdnessForQuery(sanitizedQuery);
+        console.log(requestUrl);
+        request(requestUrl, (err, res, body) => {
             var response = JSON.parse(body);
             const attachment = new Attachment(response.data.images.original.url);
             message.channel.send(attachment);
