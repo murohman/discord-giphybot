@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+
+# Ignore the config.js file to avoid committing any private keys
+config.js
+
+# Ignore Package-Lock
+package-lock.json

@@ -1,0 +1,22 @@
+{
+  "name": "discord-giphybot",
+  "version": "1.0.0",
+  "description": "A discord implementation of giphy bot of slack made in node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murohman/discord-giphybot.git"
+  },
+  "author": "Dominic Boulanger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murohman/discord-giphybot/issues"
+  },
+  "homepage": "https://github.com/murohman/discord-giphybot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
