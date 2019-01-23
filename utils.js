@@ -7,6 +7,10 @@ let methods = {
 
     sanitize: function(message) {
         return message.replace(/ /g, '+');
+    },
+
+    getRandomNumber(lower, higher) {
+        return Math.floor((Math.random() * higher) + lower);
     }
 };
 

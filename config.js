@@ -11,6 +11,16 @@ module.exports = {
         // Base host path for the giphy api. Should not be changed unless giphy moves paths and breaks compatibility
         host: "https://api.giphy.com",
         // Base path for the random endpoint of the giphy api. Should not be changed unless giphy moves paths and breaks compatibility
-        path: "/v1/gifs/random"
+        randomPath: "/v1/gifs/random",
+        // Base path for the translate endpoint of the giphy api. Should not be changed unless giphy moves paths and breaks compatibility
+        translatePath: "/v1/gifs/translate",
+        // The translate api supports a wierdness integer ranging from 0 to 10
+        translateWierdnessRandom: true,
+        // The lower bound for the random seed
+        translateWierdnessLowerBound: 0,
+        // The higher bound for the random seed
+        translateWierdnessHigherBound: 10,
+        // If translateWierdnessRandom is false, this value will be taken as a fixed value instead
+        translateWierdnessLevel: 0
     }
 }
